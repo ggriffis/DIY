@@ -42,6 +42,7 @@ class InstructionsController < ApplicationController
 private
   def find_how_to_list
     @how_to_list = HowToList.find(params[:how_to_list_id])
+  end
 
   def find_instruction
     @instruction = @how_to_list.instructions.find(params[:id])

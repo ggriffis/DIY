@@ -11,7 +11,7 @@
 </p>
 
 <ul id='instructions'>
-  <% @how_to_list.sorted_instructions each do |instruction| %>
+  <% @how_to_list.sorted_instructions.each do |instruction| %>
     <li>
       #<%= instruction.sequence %> -
       <%= link_to instruction.description.slice(0,20), [@how_to_list, instruction] %>
@@ -21,4 +21,4 @@
 
 <%= link_to 'Edit', edit_how_to_list_path(@how_to_list) %> |
 <%= link_to 'Back', how_to_lists_path %>
-<%= link_to "New Instruction", new_how_to_list_instructio_path(@how_to_list) %>
+<%= link_to "New Instruction", new_how_to_list_instruction_path(@how_to_list) %>

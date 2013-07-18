@@ -4,6 +4,6 @@ class HowToList < ActiveRecord::Base
   has_many :instructions, :dependent => :delete_all
 
   def sorted_instructions
-    self.instructions.sort_by {|i| i.sequence}
+    return self.instructions.sort_by {|i| i.sequence}
   end
 end
