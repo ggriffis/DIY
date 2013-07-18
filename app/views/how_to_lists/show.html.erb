@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @how_to_list.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @how_to_list.description %>
+</p>
+
+<ul id='instructions'>
+  <% @how_to_list.sorted_instructions each do |instruction| %>
+    <li>
+      #<%= instruction.sequence %> -
+      <%= link_to instruction.description.slice(0,20), [@how_to_list, instruction] %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_how_to_list_path(@how_to_list) %> |
+<%= link_to 'Back', how_to_lists_path %>
+<%= link_to "New Instruction", new_how_to_list_instructio_path(@how_to_list) %>

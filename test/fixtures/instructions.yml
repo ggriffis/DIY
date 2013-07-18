@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sequence: 1
+  description: MyText
+  how_to_list: 
+
+two:
+  sequence: 1
+  description: MyText
+  how_to_list: 

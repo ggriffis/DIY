@@ -1,4 +1,11 @@
 DIY::Application.routes.draw do
+  root :to => "how_to_lists#index"
+
+  resources :how_to_lists do
+    resources :instructions
+  end
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
